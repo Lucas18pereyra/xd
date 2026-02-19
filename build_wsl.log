@@ -1,0 +1,173 @@
+[22:02:04] Run subprocess: ['/home/lucas/flutter/bin/flutter', '--version', '--no-version-check',                       
+           '--suppress-analytics']                                                                                      
+[22:02:05] Flutter 3.27.3 installed ✅                                                                                  
+           Flutter executable: /home/lucas/flutter/3.27.3/bin/flutter                                                   
+           Dart executable: /home/lucas/flutter/3.27.3/bin/dart                                                         
+           JDK installed at /home/lucas/java/17.0.13+11                                                                 
+           Configuring Flutter's path to JDK                                                                            
+           Run subprocess: ['/home/lucas/flutter/3.27.3/bin/flutter', 'config', '--suppress-analytics',                 
+           '--jdk-dir=/home/lucas/java/17.0.13+11']                                                                     
+           Setting "jdk-dir" value to "/home/lucas/java/17.0.13+11".                                                    
+                                                                                                                        
+           You may need to restart any open editors for them to read new settings.                                      
+           JDK installed ✅                                                                                             
+           Android SDK installation found at /home/lucas/Android/sdk                                                    
+           Android SDK package "cmdline-tools;latest" is already installed                                              
+           Android SDK package "platform-tools" is already installed                                                    
+           Android SDK package "platforms;android-35" is already installed                                              
+           Android SDK package "build-tools;34.0.0" is already installed                                                
+           Android SDK installed ✅                                                                                     
+[22:02:06] Custom Flutter dependencies: {}                                                                              
+[22:02:19] Created Flutter bootstrap project from gh:flet-dev/flet-build-template with ref "0.26.0" ✅                  
+           Run subprocess: ['/home/lucas/flutter/3.27.3/bin/dart', 'run', '--suppress-analytics', 'serious_python:main',
+           'package', '/mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida', '--platform', 'Android', '--requirements',  
+           'flet==0.26.0,python-dotenv==1.2.1,supabase==2.4.6', '--exclude', 'build', '--cleanup']                      
+[22:02:22] Running package command                                                                                      
+           Extra PyPi indexes:                                                                                          
+           Creating asset directory: /mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida/build/flutter/app               
+           Created temp directory: /tmp/serious_python_tempINVFFC                                                       
+           Copying Python app from /mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida to a temp directory               
+[22:04:42] Cleanup app                                                                                                  
+[22:04:44] Configured Android/arm64-v8a platform with sitecustomize.py                                                  
+           Installing  with pip command to                                                                              
+           /mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida/build/site-packages/arm64-v8a                             
+           Downloading Python distributive from                                                                         
+           https://github.com/indygreg/python-build-standalone/releases/download/20240909/cpython-3.12.6+20240909-x86_64
+           -unknown-linux-gnu-install_only_stripped.tar.gz to a build directory                                         
+[22:04:47] Extracting Python distributive                                                                               
+[22:06:20] Cleanup installed packages                                                                                   
+[22:06:23] Configured Android/armeabi-v7a platform with sitecustomize.py                                                
+           Installing  with pip command to                                                                              
+           /mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida/build/site-packages/armeabi-v7a                           
+[22:07:16] Cleanup installed packages                                                                                   
+[22:07:20] Configured Android/x86_64 platform with sitecustomize.py                                                     
+           Installing  with pip command to /mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida/build/site-packages/x86_64
+[22:08:12] Cleanup installed packages                                                                                   
+[22:08:15] Configured Android/x86 platform with sitecustomize.py                                                        
+           Installing  with pip command to /mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida/build/site-packages/x86   
+[22:09:09] Cleanup installed packages                                                                                   
+[22:09:13] Creating app archive at /mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida/build/flutter/app/app.zip from a  
+           temp directory                                                                                               
+[22:09:40] Writing app archive hash to /mnt/c/Users/lucas/OneDrive/Desktop/controlatuvida/build/flutter/app/app.zip.hash
+[22:09:41] Deleting temp directory                                                                                      
+[22:09:42] Packaged Python app ✅                                                                                       
+[22:09:47] Customized app icons and splash images ✅                                                                    
+           Run subprocess: ['/home/lucas/flutter/3.27.3/bin/dart', 'run', '--suppress-analytics',                       
+           'flutter_launcher_icons']                                                                                    
+[22:09:50]   ════════════════════════════════════════════                                                               
+                FLUTTER LAUNCHER ICONS (v0.14.4)                                                                        
+             ════════════════════════════════════════════                                                               
+                                                                                                                        
+           • Creating default icons Android                                                                             
+           • Creating adaptive icons Android                                                                            
+           • No colors.xml file found in your Android project                                                           
+           • Creating colors.xml file and adding it to your Android project                                             
+           • Overwriting the default Android launcher icon with a new icon                                              
+           • Creating mipmap xml file Android                                                                           
+[22:09:51] • Overwriting default iOS launcher icon with new icon                                                        
+           Creating Icons for Web...                                                                                    
+[22:09:52] Creating Icons for Windows...                                                                                
+           Creating Icons for MacOS...                                                                                  
+[22:09:53]                                                                                                              
+           ✓ Successfully generated launcher icons                                                                      
+           Generated app icons ✅                                                                                       
+           Run subprocess: ['/home/lucas/flutter/3.27.3/bin/dart', 'run', '--suppress-analytics',                       
+           'flutter_native_splash:create']                                                                              
+[22:09:55] [Android] Creating default splash images                                                                     
+           [Android] Creating dark mode splash images                                                                   
+[22:09:56] [Android] Creating default android12splash images                                                            
+           [Android] Creating dark mode android12splash images                                                          
+           [Android] Updating launch background(s) with splash image path...                                            
+           [Android]  - android/app/src/main/res/drawable/launch_background.xml                                         
+[22:09:57] [Android]  - android/app/src/main/res/drawable-night/launch_background.xml                                   
+           [Android]  - android/app/src/main/res/drawable-v21/launch_background.xml                                     
+           [Android]  - android/app/src/main/res/drawable-night-v21/launch_background.xml                               
+           [Android] Updating styles...                                                                                 
+           [Android]  - android/app/src/main/res/values-v31/styles.xml                                                  
+           [Android] No android/app/src/main/res/values-v31/styles.xml found in your Android project                    
+           [Android] Creating android/app/src/main/res/values-v31/styles.xml and adding it to your Android project      
+           [Android]  - android/app/src/main/res/values-night-v31/styles.xml                                            
+           [Android] No android/app/src/main/res/values-night-v31/styles.xml found in your Android project              
+           [Android] Creating android/app/src/main/res/values-night-v31/styles.xml and adding it to your Android project
+           [Android]  - android/app/src/main/res/values/styles.xml                                                      
+           [Android]  - android/app/src/main/res/values-night/styles.xml                                                
+            Creating  images                                                                                            
+            Creating dark mode  images                                                                                  
+            Updating ios/Runner/Info.plist for status bar hidden/visible                                                
+           [Web] Creating images                                                                                        
+[22:09:58] [Web] Creating images                                                                                        
+           [Web] Creating background images                                                                             
+           [Web] Creating CSS                                                                                           
+           [Web] Updating index.html                                                                                    
+                                                                                                                        
+           ✅ Native splash complete.                                                                                   
+           Now go finish building something awesome! 💪 You rock! 🤘🤩                                                  
+           Like the package? Please give it a 👍 here: https://pub.dev/packages/flutter_native_splash                   
+                                                                                                                        
+           Generated splash screens ✅                                                                                  
+           Run subprocess: ['/home/lucas/flutter/3.27.3/bin/flutter', 'build', 'apk', '--no-version-check',             
+           '--suppress-analytics', '--build-name', '0.1.0']                                                             
+[22:10:17] Resolving dependencies...                                                                                    
+           Downloading packages...                                                                                      
+[22:10:18]   archive 3.6.1 (4.0.9 available)                                                                            
+             characters 1.3.0 (1.4.1 available)                                                                         
+             checked_yaml 2.0.3 (2.0.4 available)                                                                       
+             clock 1.1.1 (1.1.2 available)                                                                              
+             collection 1.19.0 (1.19.1 available)                                                                       
+             cross_file 0.3.4+2 (0.3.5+2 available)                                                                     
+             device_info_plus 11.3.0 (12.3.0 available)                                                                 
+             device_info_plus_platform_interface 7.0.2 (7.0.3 available)                                                
+             ffi 2.1.3 (2.2.0 available)                                                                                
+             file_picker 8.3.7 (10.3.10 available)                                                                      
+             fl_chart 0.69.2 (1.1.1 available)                                                                          
+           ! flet 0.26.0 (overridden) (0.80.5 available)                                                                
+             flutter_lints 2.0.3 (6.0.0 available)                                                                      
+             flutter_native_splash 2.4.4 (2.4.7 available)                                                              
+             flutter_plugin_android_lifecycle 2.0.29 (2.0.33 available)                                                 
+             flutter_svg 2.2.0 (2.2.3 available)                                                                        
+             image 4.3.0 (4.8.0 available)                                                                              
+             intl 0.19.0 (0.20.2 available)                                                                             
+             js 0.6.7 (0.7.2 available)                                                                                 
+             json_annotation 4.9.0 (4.11.0 available)                                                                   
+             lints 2.1.1 (6.1.0 available)                                                                              
+             material_color_utilities 0.11.1 (0.13.0 available)                                                         
+             meta 1.15.0 (1.18.1 available)                                                                             
+             package_info_plus 8.3.1 (9.0.0 available)                                                                  
+             path 1.9.0 (1.9.1 available)                                                                               
+             path_provider_android 2.2.17 (2.2.22 available)                                                            
+             path_provider_foundation 2.4.1 (2.6.0 available)                                                           
+             petitparser 6.0.2 (7.0.2 available)                                                                        
+             sensors_plus 4.0.2 (7.0.0 available)                                                                       
+             sensors_plus_platform_interface 1.2.0 (2.0.1 available)                                                    
+             serious_python 0.8.7 (0.9.9 available)                                                                     
+             serious_python_android 0.8.7 (0.9.9 available)                                                             
+             serious_python_darwin 0.8.7 (0.9.9 available)                                                              
+             serious_python_linux 0.8.7 (0.9.9 available)                                                               
+             serious_python_platform_interface 0.8.7 (0.9.9 available)                                                  
+             serious_python_windows 0.8.7 (0.9.9 available)                                                             
+             shared_preferences 2.5.3 (2.5.4 available)                                                                 
+             shared_preferences_android 2.4.11 (2.4.20 available)                                                       
+             shared_preferences_foundation 2.5.4 (2.5.6 available)                                                      
+             toml 0.15.0 (0.18.0 available)                                                                             
+             url_launcher_android 6.3.17 (6.3.28 available)                                                             
+             url_launcher_ios 6.3.3 (6.4.1 available)                                                                   
+             url_launcher_linux 3.2.1 (3.2.2 available)                                                                 
+             url_launcher_macos 3.2.2 (3.2.5 available)                                                                 
+             url_launcher_web 2.4.1 (2.4.2 available)                                                                   
+             url_launcher_windows 3.1.4 (3.1.5 available)                                                               
+             url_strategy 0.2.0 (discontinued)                                                                          
+             vector_graphics_compiler 1.1.18 (1.2.0 available)                                                          
+             vector_math 2.1.4 (2.2.0 available)                                                                        
+           ! wakelock_plus 1.3.3 (overridden) (1.4.0 available)                                                         
+           ! web 1.1.1 (overridden)                                                                                     
+             web_socket_channel 2.4.5 (3.0.3 available)                                                                 
+           ! webview_flutter_android 4.10.11 (overridden)                                                               
+             win32 5.10.1 (5.15.0 available)                                                                            
+             win32_registry 1.1.5 (2.1.0 available)                                                                     
+           ! window_manager 0.4.3 (overridden) (0.5.1 available)                                                        
+             xml 6.5.0 (6.6.1 available)                                                                                
+           Got dependencies!                                                                                            
+           1 package is discontinued.                                                                                   
+           55 packages have newer versions incompatible with dependency constraints.                                    
+           Try `flutter pub outdated` for more information.                                                             
+[22:10:19]                                                                                                              

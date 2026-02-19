@@ -1,0 +1,17 @@
+[project]
+name = "controlatuvida"
+version = "0.1.0"
+description = "Controla Tu Vida - habitos y recordatorios"
+requires-python = ">=3.11"
+dependencies = [
+  "flet==0.26.0",
+  "python-dotenv==1.2.1",
+  "supabase==2.4.6",
+]
+
+[tool.flet]
+org = "com.lucasapps"
+product = "Controla Tu Vida"
+
+[tool.flet.app]
+path = "."
