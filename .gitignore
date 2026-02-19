@@ -8,3 +8,7 @@ build/
 .venv-linux/
 
 .env
+
+.venv-linux/
+
+.env
