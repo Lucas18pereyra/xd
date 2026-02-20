@@ -1,4 +1,4 @@
-﻿name: Build Android APK
+name: Build Android APK
 
 on:
   workflow_dispatch:
@@ -10,8 +10,25 @@ on:
 jobs:
   build-apk:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: controlatuvida
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -22,28 +39,14 @@ jobs:
       - name: Verify Flutter
         run: flutter --version
 
-
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
-
-          
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install flet-cli==0.80.5
           pip install -r requirements.txt
 
-
       - name: Build APK
         run: |
           flet build apk --no-rich-output --skip-flutter-doctor
 
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: controlatuvida-apk
-          path: build/apk/**/*.apk
+     
