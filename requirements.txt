@@ -1,3 +1,4 @@
-flet==0.26.0
+flet==0.80.5
 python-dotenv==1.2.1
 supabase==2.28.0
+
