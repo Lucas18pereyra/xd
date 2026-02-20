@@ -47,7 +47,8 @@ jobs:
 
       - name: Build APK
         run: |
-          flet build apk --no-rich-output --skip-flutter-doctor
+          printf "y\n" | flet build apk --clear-cache --no-rich-output --skip-flutter-doctor
+
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
