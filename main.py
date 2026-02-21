@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import date
+import traceback
 
 import flet as ft
 
@@ -16,7 +17,7 @@ RED = "#ff7a7a"
 TEXT_DIM = "#97a6bf"
 
 
-def main(page: ft.Page) -> None:
+def _main_impl(page: ft.Page) -> None:
     page.title = "Controla Tu Vida"
     page.theme_mode = ft.ThemeMode.DARK
     page.bgcolor = BG
@@ -460,7 +461,11 @@ def main(page: ft.Page) -> None:
                 ft.Container(
                     border_radius=18,
                     padding=16,
-                    gradient=ft.LinearGradient(colors=["#163a78", "#0d2145"], begin=ft.alignment.top_left, end=ft.alignment.bottom_right),
+                    gradient=ft.LinearGradient(
+                        colors=["#163a78", "#0d2145"],
+                        begin=ft.alignment.top_left,
+                        end=ft.alignment.bottom_right,
+                    ),
                     content=ft.Row(
                         alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                         controls=[
@@ -490,6 +495,24 @@ def main(page: ft.Page) -> None:
         page.update()
 
     render()
+
+
+def main(page: ft.Page) -> None:
+    try:
+        _main_impl(page)
+    except Exception as e:
+        page.clean()
+        page.add(
+            ft.Column(
+                controls=[
+                    ft.Text("Error al iniciar app", color=ft.Colors.RED, size=22, weight=ft.FontWeight.BOLD),
+                    ft.Text(str(e), selectable=True),
+                    ft.Text(traceback.format_exc(), selectable=True, size=11),
+                ],
+                scroll=ft.ScrollMode.AUTO,
+            )
+        )
+        page.update()
 
 
 if __name__ == "__main__":
