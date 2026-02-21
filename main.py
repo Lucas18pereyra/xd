@@ -25,7 +25,7 @@ def _main_impl(page: ft.Page) -> None:
     page.horizontal_alignment = ft.CrossAxisAlignment.STRETCH
     page.theme = ft.Theme(
         color_scheme_seed=ACCENT,
-        visual_density=ft.ThemeVisualDensity.COMPACT,
+        visual_density=ft.VisualDensity.COMPACT,
     )
 
     root = ft.Column(expand=True, spacing=12, scroll=ft.ScrollMode.AUTO, width=680)
