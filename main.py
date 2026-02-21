@@ -38,7 +38,7 @@ def _main_impl(page: ft.Page) -> None:
 
     try:
         db = SupabaseDB.from_env()
-    except ConfigError as exc:
+    except (ConfigError, RuntimeError) as exc:
         notify(str(exc), RED)
         root.controls = [
             ft.Text("Controla Tu Vida", size=28, weight=ft.FontWeight.W_700),
@@ -55,8 +55,8 @@ def _main_impl(page: ft.Page) -> None:
                         ft.Text("Pasos:", weight=ft.FontWeight.W_600),
                         ft.Text("1) Crea un proyecto en Supabase."),
                         ft.Text("2) Ejecuta el SQL de supabase/schema.sql."),
-                        ft.Text("3) Define SUPABASE_URL y SUPABASE_ANON_KEY."),
-                        ft.Text("4) Reinicia la app."),
+                        ft.Text("3) Configura SUPABASE_URL y SUPABASE_ANON_KEY."),
+                        ft.Text("4) Genera un APK nuevo."),
                     ],
                 ),
             ),
@@ -112,7 +112,7 @@ def _main_impl(page: ft.Page) -> None:
                                 controls=[
                                     ft.Text(str(row["name"]), size=16, weight=ft.FontWeight.W_600),
                                     ft.Text(
-                                        f"Racha: {int(row['streak'] or 0)} | Hecho: {int(row['total_done'] or 0)}",
+                                        f"Racha: {int(row.get('streak') or 0)} | Hecho: {int(row.get('total_done') or 0)}",
                                         size=12,
                                         color=TEXT_DIM,
                                     ),
@@ -377,7 +377,7 @@ def _main_impl(page: ft.Page) -> None:
         expand=True,
         tabs=[
             ft.Tab(
-                text="Habitos",
+                tab_content=ft.Text("Habitos"),
                 content=ft.Container(
                     padding=10,
                     content=ft.Column(
@@ -397,7 +397,7 @@ def _main_impl(page: ft.Page) -> None:
                 ),
             ),
             ft.Tab(
-                text="Recordatorios",
+                tab_content=ft.Text("Recordatorios"),
                 content=ft.Container(
                     padding=10,
                     content=ft.Column(
@@ -418,7 +418,7 @@ def _main_impl(page: ft.Page) -> None:
                 ),
             ),
             ft.Tab(
-                text="Estadisticas",
+                tab_content=ft.Text("Estadisticas"),
                 content=ft.Container(
                     padding=10,
                     content=stats_col,
@@ -505,7 +505,7 @@ def main(page: ft.Page) -> None:
         page.add(
             ft.Column(
                 controls=[
-                    ft.Text("Error al iniciar app", color=ft.Colors.RED, size=22, weight=ft.FontWeight.BOLD),
+                    ft.Text("Error al iniciar app", color=RED, size=22, weight=ft.FontWeight.W_700),
                     ft.Text(str(e), selectable=True),
                     ft.Text(traceback.format_exc(), selectable=True, size=11),
                 ],
