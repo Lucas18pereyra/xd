@@ -20,14 +20,15 @@ class SupabaseDB:
         self.user_id: str | None = None
         self.user_email: str | None = None
 
-    @classmethod
-    def from_env(cls) -> "SupabaseDB":
-        load_dotenv()
-        url = os.getenv("SUPABASE_URL", "").strip()
-        anon_key = os.getenv("SUPABASE_ANON_KEY", "").strip()
-        if not url or not anon_key:
-            raise ConfigError("Faltan SUPABASE_URL y SUPABASE_ANON_KEY.")
-        return cls(url, anon_key)
+@classmethod
+def from_env(cls) -> "SupabaseDB":
+    load_dotenv()
+    url = os.getenv("SUPABASE_URL", "").strip() or "https://rzfesnaawmuncmbyhgwn.supabase.co"
+    anon_key = os.getenv("SUPABASE_ANON_KEY", "").strip() or "TU_ANON_LEGACY_EYJ..."
+    if not url or not anon_key:
+        raise ConfigError("Faltan SUPABASE_URL y SUPABASE_ANON_KEY.")
+    return cls(url, anon_key)
+
 
     def _auth_headers(self, bearer: str | None = None) -> dict[str, str]:
         h = {"apikey": self.anon_key, "Content-Type": "application/json"}
